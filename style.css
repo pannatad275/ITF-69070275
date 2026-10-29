@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #ff6b6b;
+  --card-bg: #ffffff;
+  --text: #2d3436;
+  --text-light: #636e72;
+  --accent: #00b894;
+}
+
+body {
+  font-family: "Kanit", sans-serif;
+  background: linear-gradient(135deg, #ffeaa7 0%, #fd79a8 100%);
+  min-height: 100vh;
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  font-size: 1rem;
+  color: var(--text-light);
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 1rem;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.hero p {
+  font-size: 1.25rem;
+  color: #fff;
+  opacity: 0.95;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: 24px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  max-width: 520px;
+  width: 100%;
+}
+
+.card-image {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.card-content {
+  padding: 2rem;
+}
+
+.price {
+  display: inline-block;
+  background: var(--primary);
+  color: #fff;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.card-content h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 0.75rem;
+}
+
+.card-content p {
+  font-size: 1.05rem;
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+.pick-btn {
+  display: block;
+  margin: 2rem auto 0;
+  padding: 1rem 2.5rem;
+  font-family: "Kanit", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  background: var(--accent);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 15px rgba(0, 184, 148, 0.4);
+}
+
+.pick-btn:hover {
+  background: #009e7c;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+  .hero h1 { font-size: 2rem; }
+  .card-image { height: 240px; }
+}

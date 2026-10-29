@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Food Picker สุ่มเมนูอาหาร</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">🍽️ Food Picker</div>
+      <div class="nav-links">
+        <span class="nav-link active">หน้าแรก</span>
+        <span class="nav-link">เมนูทั้งหมด</span>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <h1>สุ่มเมนูอาหารของวันนี้</h1>
+      <p>ไม่รู้จะกินอะไรดี? ให้เราช่วยคุณเลือก</p>
+    </section>
+
+    <div class="card">
+      <div class="card-image">
+        <img id="foodImage" src="" alt="รูปภาพอาหาร" />
+      </div>
+      <div class="card-content">
+        <div class="price" id="foodPrice"></div>
+        <h2 id="foodName">ชื่อเมนูอาหาร</h2>
+        <p id="foodDesc">คำอธิบายเมนูอาหารจะแสดงตรงนี้</p>
+      </div>
+      <button id="pickBtn" class="pick-btn">สุ่มเมนู</button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
